@@ -11,7 +11,7 @@ public class ConnectionFactory {
 
             String url = "jdbc:mysql://localhost:3306/test_log";
             String username = "root";
-            String password = "154263kk";
+            String password = "teste123";
 
             return DriverManager.getConnection(url, username, password);
         } catch (Exception e) {
