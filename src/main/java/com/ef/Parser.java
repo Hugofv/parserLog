@@ -1,34 +1,36 @@
 package com.ef;
 
+import com.ef.ValueObject.Options;
 import com.ef.service.LogService;
 
-import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Parser {
 
     public static void main(String[] args) {
 
         LogService logService = new LogService();
+        Options options = new Options();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd.HH:mm:ss");
 
-        System.out.println("Deu Certo");
+        if(args.length != 4) {
+            System.out.println("The Option not informed, please verify command");
+            throw new RuntimeException();
+        }
 
         String[] partAcessLog = args[0].split("=");
-        String acessLog = partAcessLog[1];
+        options.setAcessLog(partAcessLog[1]);
 
         String[] partStartDate = args[1].split("=");
-        String startDate = partStartDate[1];
+        options.setStartDate(LocalDateTime.parse(partStartDate[1], formatter));
 
         String[] partDuration = args[2].split("=");
-        String duration = partDuration[1];
+        options.setDuration(partDuration[1]);
 
-        try {
-            FileInputStream fileInputStream = new FileInputStream(acessLog);
-            BufferedReader bufferedInputStream = new BufferedReader(new InputStreamReader(fileInputStream));
+        String[] partThrehold = args[3].split("=");
+        options.setThreshold(Integer.parseInt(partThrehold[1]));
 
-            logService.readLog(bufferedInputStream);
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        logService.readLog(options);
     }
 }

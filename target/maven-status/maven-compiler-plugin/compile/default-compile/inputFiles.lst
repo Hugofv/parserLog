@@ -1,1 +1,6 @@
-/Users/hugofernandes/Desktop/parser/src/main/java/com/ef/Parser.java
+/Users/hugofernandes/Desktop/parserLog/src/main/java/com/ef/Parser.java
+/Users/hugofernandes/Desktop/parserLog/src/main/java/com/ef/repository/ConnectionFactory.java
+/Users/hugofernandes/Desktop/parserLog/src/main/java/com/ef/ValueObject/Options.java
+/Users/hugofernandes/Desktop/parserLog/src/main/java/com/ef/model/Log.java
+/Users/hugofernandes/Desktop/parserLog/src/main/java/com/ef/service/LogService.java
+/Users/hugofernandes/Desktop/parserLog/src/main/java/com/ef/repository/LogDAO.java

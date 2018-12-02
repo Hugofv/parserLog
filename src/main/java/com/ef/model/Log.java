@@ -1,30 +1,20 @@
 package com.ef.model;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "LogRegistry")
+
 public class Log {
 
-    @Id
-    @GeneratedValue
-    @Column(name = "Id")
     private int id;
 
-    @Column(name = "StartDate")
     private LocalDateTime startDate;
 
-    @Column(name = "IpAddress")
     private String ipAddress;
 
-    @Column(name = "Request")
     private String request;
 
-    @Column(name = "StatusCode")
     private int statusCode;
 
-    @Column(name = "UserAgent")
     private String userAgent;
 
     /**
@@ -60,9 +50,7 @@ public class Log {
         return statusCode;
     }
 
-    public void setStatusCode(int statusCode) {
-        this.statusCode = statusCode;
-    }
+    public void setStatusCode(int statusCode) { this.statusCode = statusCode; }
 
     public String getUserAgent() {
         return userAgent;
