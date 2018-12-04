@@ -1,5 +1,6 @@
 com/ef/repository/LogDAO.class
 com/ef/model/Log.class
+com/ef/model/FileLog.class
 com/ef/Parser.class
 com/ef/repository/ConnectionFactory.class
 com/ef/ValueObject/Options.class

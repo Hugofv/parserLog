@@ -1,34 +1,45 @@
 package com.ef.model;
 
-public class IpBlock {
+public class IpBlocked {
 
-    private String IpAddress;
+    private String ipAddress;
 
-    private String Reason;
+    private String reason;
 
-    private long Quantity;
+    private long quantity;
+
+    private int fileId;
+
 
     public String getIpAddress() {
-        return IpAddress;
+        return ipAddress;
     }
 
     public void setIpAddress(String ipAddress) {
-        IpAddress = ipAddress;
+        this.ipAddress = ipAddress;
     }
 
     public String getReason() {
-        return Reason;
+        return reason;
     }
 
     public void setReason(String reason) {
-        Reason = reason;
+        this.reason = reason;
     }
 
     public long getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(long quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
+    }
+
+    public int getFileId() {
+        return fileId;
+    }
+
+    public void setFileId(int fileId) {
+        this.fileId = fileId;
     }
 }

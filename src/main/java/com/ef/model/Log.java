@@ -7,6 +7,8 @@ public class Log {
 
     private int id;
 
+    private int fileId;
+
     private LocalDateTime startDate;
 
     private String ipAddress;
@@ -58,5 +60,13 @@ public class Log {
 
     public void setUserAgent(String userAgent) {
         this.userAgent = userAgent;
+    }
+
+    public int getFileId() {
+        return fileId;
+    }
+
+    public void setFileId(int fileId) {
+        this.fileId = fileId;
     }
 }
