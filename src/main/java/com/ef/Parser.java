@@ -48,6 +48,7 @@ public class Parser {
 
                 case "threshold":
                     options.setThreshold(Integer.parseInt(partArgs[1]));
+                    break;
             }
         }
 
