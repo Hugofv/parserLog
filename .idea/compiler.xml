@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jar-parser" />
-        <module name="parser" />
+        <module name="parserLog" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parserLog" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

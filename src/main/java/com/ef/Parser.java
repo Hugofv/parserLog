@@ -6,15 +6,25 @@ import com.ef.service.LogService;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Class principal of configuration and initialize the application.
+ *
+ * @author Hugo Fernandes
+ */
 public class Parser {
 
+    /**
+     * Point of starter the project.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
 
         LogService logService = new LogService();
         Options options = new Options();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd.HH:mm:ss");
 
-        if(args.length != 4) {
+        if(args.length < 4) {
             System.out.println("The option not informed, please verify command");
             throw new RuntimeException();
         }
@@ -41,9 +51,8 @@ public class Parser {
             }
         }
 
-        System.out.println("======= Process initialized =========");
+        System.out.println("============ Process initialized ============");
 
         logService.readLog(options);
-        logService.analyzeLog(options);
     }
 }
